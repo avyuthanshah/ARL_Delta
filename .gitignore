@@ -1,0 +1,10 @@
+/.bsp/
+target/
+/.bloop/
+/.metals/
+/.vscode/
+/.idea/
+delta_notebook/Delta_test.ipynb
+delta_notebook/deltaFetch.ipynb
+delta_notebook/hadoopDelta.ipynb
+delta_notebook/pySpark.ipynb
