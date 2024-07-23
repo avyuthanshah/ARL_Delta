@@ -6,5 +6,5 @@ target/
 /.idea/
 delta_notebook/Delta_test.ipynb
 delta_notebook/deltaFetch.ipynb
-delta_notebook/hadoopDelta.ipynb
+delta_notebook/deltaHDFS.ipynb
 delta_notebook/pySpark.ipynb
