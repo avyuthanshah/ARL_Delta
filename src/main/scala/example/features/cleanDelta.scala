@@ -20,7 +20,7 @@ object cleanDelta extends App{
 //    .config("spark.databricks.delta.optimizeWrite.binSize", "256MB") // Set bin size for optimized writes
     .getOrCreate()
 
-  val delPath="/home/avyuthan-shah/Desktop/Data/dataFFF"
+  val delPath="/home/avyuthan-shah/Desktop/Data/dataFF"
 
   val dT=spark.read.format("delta").load(delPath)
   dT.printSchema()
@@ -37,7 +37,8 @@ object cleanDelta extends App{
 //    deltaTable.optimize().executeCompaction()
 //  deltaTable.optimize().executeCompaction()
 //  deltaTable.vacuum()
-   deltaTable.vacuum(retentionHours=48)
+  //  deltaTable.vacuum(retentionHours=48)
+  deltaTable.vacuum(0)
   // val endTime = System.nanoTime()
 
   // status.writeFile("false")
