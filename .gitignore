@@ -7,4 +7,4 @@ target/
 delta_notebook/Delta_test.ipynb
 delta_notebook/deltaHDFS.ipynb
 delta_notebook/pySpark.ipynb
-src/main/scala/example/dataHandling/dataFcheckpoints2/
+src/main/scala/example/dataHandling/dataFcheckpoints/
