@@ -23,7 +23,7 @@ object concWrite2 extends App {
   def writeOperation(spark: SparkSession, accountNo: String, depBal: Double): Future[Unit] = Future {
     val latestBalance = example.Extra.getBal.getTabBal(spark, deltaPath, accountNo) // Gets the latest balance of the given account number
     val deltaTable = DeltaTable.forPath(spark, deltaPath)
-    val bal=500.0+depBal
+    val bal=latestBalance+depBal
 
     val currTime: String = time.getTime()
     val currDate:String=time.getDate()

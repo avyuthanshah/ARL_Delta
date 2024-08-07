@@ -9,6 +9,10 @@ object writeStream extends App{
     .master("local[*]")
     .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
     .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
+    .config("spark.databricks.delta.autoCompact.enabled", "true") // Enable auto-compaction globally. By default will use 128 MB as the target file size.
+    .config("spark.databricks.delta.optimizeWrite.enabled", "true")
+    .config("spark.databricks.delta.autoCompact.targetFileSize", "256MB") // Set target file size for auto-compaction
+    .config("spark.databricks.delta.optimizeWrite.binSize", "256MB") // Set bin size for optimized writes
     .getOrCreate()
 
   val schema = StructType(Array(
